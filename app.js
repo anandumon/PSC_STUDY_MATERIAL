@@ -41,9 +41,23 @@
     }
 
     function bindSidebarToggle() {
-        sidebarToggle.addEventListener('click', () => {
+        const toggleSidebar = () => {
             sidebar.classList.toggle('collapsed');
+        };
+
+        if (sidebarToggle) sidebarToggle.addEventListener('click', toggleSidebar);
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileToggle) mobileToggle.addEventListener('click', toggleSidebar);
+        
+        const overlay = document.getElementById('sidebar-overlay');
+        if (overlay) overlay.addEventListener('click', () => {
+            sidebar.classList.add('collapsed');
         });
+
+        // Collapse sidebar initially on small screens
+        if (window.innerWidth <= 768) {
+            sidebar.classList.add('collapsed');
+        }
     }
 
     function bindNavigation() {
@@ -335,6 +349,7 @@
                     <span class="test-progress-text">${answered}/${total} answered</span>
                 </div>
                 <div class="test-header-right">
+                    <button class="btn btn-ghost btn-sm btn-mobile-nav-toggle" onclick="document.querySelector('.test-sidebar-panel').classList.toggle('show')">📋 Nav</button>
                     <div class="test-timer" id="test-timer">${formatTime(state.testTimeLeft)}</div>
                 </div>
             </div>
@@ -375,7 +390,7 @@
                             <h4>📋 Question Navigator</h4>
                             <div class="q-navigator" id="q-navigator">
                                 ${test.questions.map((_,i) => `
-                                <button class="q-nav-btn" id="qnav-${i}" onclick="document.getElementById('question-${i}').scrollIntoView({behavior:'smooth',block:'center'})">${i+1}</button>`).join('')}
+                                <button class="q-nav-btn" id="qnav-${i}" onclick="document.getElementById('question-${i}').scrollIntoView({behavior:'smooth',block:'center'}); if(window.innerWidth<=768) document.querySelector('.test-sidebar-panel').classList.remove('show');">${i+1}</button>`).join('')}
                             </div>
                             <div class="test-legend">
                                 <span class="legend-item"><span class="dot answered"></span> Answered</span>

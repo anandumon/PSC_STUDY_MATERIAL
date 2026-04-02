@@ -12,6 +12,17 @@
 </head>
 <body>
     <div id="app">
+        <!-- Mobile Header (hidden on desktop) -->
+        <header class="mobile-header">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <div class="logo-text">
+                    <h1>PSC PrepMaster</h1>
+                </div>
+            </div>
+            <button id="mobile-toggle" class="sidebar-toggle" type="button" aria-label="Toggle sidebar">☰</button>
+        </header>
+
         <!-- Sidebar Navigation -->
         <aside id="sidebar" class="sidebar">
             <div class="sidebar-header">
@@ -81,6 +92,7 @@
                 </button>
             </nav>
         </aside>
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
         <!-- Main Content Area -->
         <main id="main-content" class="main-content">
