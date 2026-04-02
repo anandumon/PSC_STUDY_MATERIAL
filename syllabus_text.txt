@@ -1,0 +1,77 @@
+DETAILED SYLLABUS FOR THE POST OF DEPUTY MANAGER (IT)-
+MATSYAFED/ASSISTANT PROGRAMMER-KERALA STATE PLANNING
+BOARD/COMPUTER PROGRAMMER-MATSYAFED/MANAGER(IT)-
+MATSYAFED/ASSISTANT MANAGER(IT)-MATSYAFED
+        (Cat.No.: 268/2025,442/2025,460/2025,609/2025,614/2025)
+(Total Marks – 100 )
+Discrete Mathematics, Probability and Statistics  (12 Marks)
+Compound Statements, Truth T ables, The Algebra of Propositions, Logical
+Arguments, Sets, Operations on Sets, Binary Relations, Partial Orders,
+Mathematical Induction, The Principle of Inclusion-Exclusion, Probability
+theory: Sample spaces, Events and probability, Discrete probability: Union,
+Intersection and Compliment of events, Conditional probability, Baye’s
+theorem. Linear correlation coefficient, Linear regression, Non Linear
+regression, Multiple correlation and Multiple regression, Theory of sampling
+and population
+Digital Electronics, Computer Organization and Operating System
+(14 Marks)
+Digital Logic Systems and Microprocessors: Boolean expressions, K-maps, TTL
+and CMOS logic families, combinational logic design, synchronous sequential
+system design. Microprocessors: 8086 architecture, data transfer scheme and
+interfaces, Addressing modes.Computer Organization and Architecture: Von-
+Neumann architecture of computers. Registers and micro operations, control 
+logic, processor addressing and bus organization. Processor input/output and 
+DMA. Memory organization and cache coherence. Operating Systems: CPU 
+scheduling, Deadlocks, Memory management,file systems, disk scheduling. 
+Process, threads and their synchronization. Real Time OS: clock synchronization
+and task scheduling. System initialization, booting and handling user accounts. 
+Backup and restore, Bourne shell programming for Linux.
+Data Structures and Programming in C  (12 Marks)
+Data Structures: Linked List, Stack, Queue, Priority Queues, Hashing, Binary
+trees, Tree traversal, AVL trees, Graphs- shortest paths, minimum spanning
+trees; Sorting algorithms. Programming in C: Operators and expressions, 
+Control statements, Storage types, Functions, Arrays, Strings, Structures, 
+Pointers and dynamic memory management, File Handling.
+Object Oriented Programming through C++/Java  (12 Marks)
+Data Abstraction, Encapsulation, classes, constructors and destructors,
+Classes, and dynamic memory allocation, Inheritance, Polymorphism, generic
+classes, exception handling and File processing. Java applets, Java features, 
+Byte codes, Internet classes, wrapper classes, multithreading support classes, 
+vector, stack, interface observer, stream tokenizer, GUI classes, Java I/O, 
+classes, The Applet class, applet architecture,applet display methods and 
+---PAGE---
+repainting. 
+Database Management System  (12 Marks)
+Keys, E-R Model, Normalization – 1NF to 5NF; Aggregate functions, Nested
+Sub queries, Views, Joined Relations, Transaction- ACID properties;
+Concurrency Control, triggers, stored procedures 
+Client Server Architectures and Web Programming  (12 Marks)
+T wo and three-tier client server architectures, web servers, HTML & XML, Style
+Sheets, client side scripting-java script and VB script; Server Side Scripting-php,
+JSP and ASP .NET programming for creating dynamic web pages using database,
+forms and session; AJAX and SignalR
+Computer networks and Programming  (14 Marks)
+Computer networks and security: TCP/IP & OSI/ISO reference models,
+functions and protocols of different layers, characteristics of physical media,
+multiplexing, medium access protocols, introduction to 802.3, 802.4, 802.5,
+802.11 LAN technology, IP protocol including routing and congestion control,
+TCP and UDP, DNS. Email protocols. Symmetric and asymmetric encryption
+including DES, AES, IDEA, RSA algorithms, key management in symmetric
+and asymmetric encryption, viruses and trusted systems, Kerberos.
+Network Programming: Sockets Programming: TCP Programming
+(TELNET, HTTP). UDP Sockets: TFTP, DNS. Secure Sockets (SSL), TLS, SSH,
+HTTPS, Remote Method Invocation (RMI). Simple Object Access Protocol
+(SOAP), UDDI, and Web Services.
+Software Engineering  (12 Marks)
+System modeling, system engineering process, life cycle models, design and
+implementation, validation, evolution, automated, process support - software
+requirements, SRS, feasibility studies - elicitation and analysis - validation -
+management - system models, context models, behavior models, data
+models, object models, object-oriented design, design evolution, real-time
+software design, critical systems specifications - critical system development,
+software testing.
+NOTE: - It may be noted that apart from the topics detailed above,
+questions from other topics prescribed for the educational
+qualification of the post may also appear in the question paper.
+There is no undertaking that all the topics above may be covered in
+the question paper.

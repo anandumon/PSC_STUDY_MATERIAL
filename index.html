@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete Study Material & Mock Test System for PSC Deputy Manager (IT) / Assistant Programmer Exam - 8 Chapters, 800 MCQs, Detailed Theory & Practice">
+    <title>PSC Deputy Manager (IT) - Complete Exam Prep</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <div class="logo-text">
+                        <h1>PSC PrepMaster</h1>
+                        <span class="logo-sub">Deputy Manager (IT)</span>
+                    </div>
+                </div>
+                <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-label="Toggle sidebar">☰</button>
+            </div>
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <button class="nav-item active" data-view="dashboard" id="nav-dashboard">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Dashboard</span>
+                </button>
+                <div class="nav-section-title">CHAPTERS</div>
+                <button class="nav-item" data-view="chapter" data-chapter="0" id="nav-ch1">
+                    <span class="nav-icon">🔢</span>
+                    <span class="nav-label">Ch 1: Discrete Math</span>
+                    <span class="nav-badge">12M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="1" id="nav-ch2">
+                    <span class="nav-icon">⚡</span>
+                    <span class="nav-label">Ch 2: Digital & OS</span>
+                    <span class="nav-badge">14M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="2" id="nav-ch3">
+                    <span class="nav-icon">🔗</span>
+                    <span class="nav-label">Ch 3: DS & C</span>
+                    <span class="nav-badge">12M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="3" id="nav-ch4">
+                    <span class="nav-icon">🧬</span>
+                    <span class="nav-label">Ch 4: OOP C++/Java</span>
+                    <span class="nav-badge">12M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="4" id="nav-ch5">
+                    <span class="nav-icon">🗄️</span>
+                    <span class="nav-label">Ch 5: DBMS</span>
+                    <span class="nav-badge">12M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="5" id="nav-ch6">
+                    <span class="nav-icon">🌐</span>
+                    <span class="nav-label">Ch 6: Web & Client-Server</span>
+                    <span class="nav-badge">12M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="6" id="nav-ch7">
+                    <span class="nav-icon">📡</span>
+                    <span class="nav-label">Ch 7: Networks</span>
+                    <span class="nav-badge">14M</span>
+                </button>
+                <button class="nav-item" data-view="chapter" data-chapter="7" id="nav-ch8">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Ch 8: Software Eng.</span>
+                    <span class="nav-badge">12M</span>
+                </button>
+                <div class="nav-section-title">TESTS</div>
+                <button class="nav-item" data-view="all-tests" id="nav-tests">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-label">All Mock Tests</span>
+                </button>
+                <button class="nav-item" data-view="progress" id="nav-progress">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-label">My Progress</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="main-content">
+            <!-- Content will be dynamically rendered -->
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="data/ch1.js"></script>
+    <script src="data/ch2.js"></script>
+    <script src="data/ch3.js"></script>
+    <script src="data/ch4.js"></script>
+    <script src="data/ch5.js"></script>
+    <script src="data/ch6.js"></script>
+    <script src="data/ch7.js"></script>
+    <script src="data/ch8.js"></script>
+    <script src="data/chapters.js"></script>
+    <script src="data/mock-tests-1.js"></script>
+    <script src="data/mock-tests-2.js"></script>
+    <script src="data/mock-tests-3.js"></script>
+    <script src="data/mock-tests-4.js"></script>
+    <script src="data/mock-tests-5.js"></script>
+    <script src="data/mock-tests-loader.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
