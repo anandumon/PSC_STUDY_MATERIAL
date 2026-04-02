@@ -120,6 +120,8 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
 }
 
 .sidebar.collapsed {
@@ -962,6 +964,16 @@ body {
 }
 
 /* Question Card */
+.chapter-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-md);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
 .question-card {
     background: var(--bg-card);
     border: 1px solid var(--border);

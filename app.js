@@ -22,11 +22,6 @@
     const sidebarToggle = document.getElementById('sidebar-toggle');
     const toast = document.getElementById('toast');
 
-    // ===== PUBLIC API (Expose Early) =====
-    window.PSC = {
-        openChapter, startTest, submitTest, selectAnswer,
-        reviewTest, goBack, setTab, showToast, toggleAnswer
-    };
 
     // ===== INIT =====
     function init() {
@@ -34,9 +29,42 @@
             console.error('Critical UI elements missing! Sidebar/Main content not found.');
             return;
         }
+
+        // Global Event Delegation for Dynamic Buttons
+        mainContent.addEventListener('click', (e) => {
+            const studyBtn = e.target.closest('.btn-study');
+            if (studyBtn) {
+                const idx = parseInt(studyBtn.dataset.idx);
+                openChapter(idx);
+                return;
+            }
+
+            const chapterCard = e.target.closest('.chapter-card');
+            if (chapterCard && !e.target.closest('button')) {
+                const idx = parseInt(chapterCard.dataset.chapter);
+                openChapter(idx);
+                return;
+            }
+        });
+
         bindNavigation();
         bindSidebarToggle();
         renderDashboard();
+        
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                // If it was in mobile-collapsed state, show it fully on desktop 
+                // OR let the user keep their choice if they manually toggled it.
+                // For now, let's just make it visible.
+                sidebar.classList.remove('collapsed');
+            } else {
+                sidebar.classList.add('collapsed');
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Run once on init
+
         console.log('PSC PrepMaster Initialized Successfully.');
     }
 
@@ -96,7 +124,7 @@
         mainContent.innerHTML = `
         <div class="dashboard">
             <div class="dashboard-hero">
-                <h1>🎯 PSC Deputy Manager (IT) Prep</h1>
+                <h1>🎯 PrepMaster</h1>
                 <p class="hero-sub">Complete Study Material & Mock Test System</p>
                 <div class="hero-stats">
                     <div class="stat-card">
@@ -128,7 +156,7 @@
                     <h3 class="chapter-title">${ch.title}</h3>
                     <p class="chapter-topics">${ch.topics}</p>
                     <div class="chapter-card-footer">
-                        <button type="button" class="btn btn-primary btn-sm" onclick="window.PSC.openChapter(${i})">Study Now →</button>
+                        <button type="button" class="btn btn-primary btn-sm btn-study" data-idx="${i}">Study Now →</button>
                         <span class="test-count">${MOCK_TESTS.filter(t=>t.chapterIndex===i).length} Tests</span>
                     </div>
                 </div>`).join('')}
@@ -332,6 +360,7 @@
         state.testTimeLeft = test.duration * 60;
         state.currentView = 'test';
 
+        window.scrollTo(0, 0);
         renderTestUI();
         startTimer();
     }
@@ -702,6 +731,13 @@
         sidebarNav.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
         const navBtn = document.getElementById('nav-ch' + (idx + 1));
         if (navBtn) navBtn.classList.add('active');
+        
+        // Collapse sidebar if on mobile
+        sidebar.classList.add('collapsed');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+        
         renderChapter(idx);
     }
 
@@ -710,6 +746,12 @@
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 3000);
     }
+
+    // ===== PUBLIC API =====
+    window.PSC = {
+        openChapter, startTest, submitTest, selectAnswer,
+        reviewTest, goBack, setTab, showToast, toggleAnswer
+    };
 
     // Start when DOM is ready
     if (document.readyState === 'loading') {
